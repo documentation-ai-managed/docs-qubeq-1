@@ -1,0 +1,132 @@
+---
+title: Getting Started with Qubeq
+description: Set up your Qubeq account and create your first documentation space in just a few minutes.
+---
+
+## Prerequisites
+
+<Callout kind="info" title="Before You Begin">
+You need:
+- A modern web browser (Chrome, Firefox, Safari, or Edge)
+- An email address for account verification
+- Optional: GitHub, GitLab, or Bitbucket account for repository integration
+</Callout>
+
+Qubeq makes it easy to organize your project documentation. Follow these steps to create your account, set up a project space, upload files, and start editing.
+
+## Step 1: Create Your Qubeq Account
+
+Sign up in under a minute.
+
+<Steps>
+  <Step title="Visit Qubeq Dashboard" icon="monitor">
+    Go to [https://app.qubeq.com](https://app.qubeq.com) and click **Sign Up**.
+  </Step>
+  <Step title="Enter Details" icon="user">
+    Provide your email, create a password, and verify your email address via the confirmation link.
+  </Step>
+  <Step title="Complete Onboarding" icon="check-circle">
+    Choose your workspace name and select your role (Owner or Member).
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+Save your login credentials securely. Use a password manager for best security.
+</Callout>
+
+## Step 2: Set Up Your First Project Space
+
+Project spaces organize your docs by project.
+
+<Steps>
+  <Step title="Create New Space" icon="plus">
+    From the dashboard, click **New Space** and enter a name like `My Project Docs`.
+  </Step>
+  <Step title="Configure Settings" icon="settings">
+    Set visibility (Public, Private, or Workspace-only) and add a description.
+  </Step>
+  <Step title="Invite Collaborators" icon="users">
+    Share the space invite link or add users by email.
+  </Step>
+</Steps>
+
+## Upload Your Initial Documentation Files
+
+Qubeq supports multiple upload methods.
+
+<Tabs>
+  <Tab title="Drag & Drop" icon="upload">
+    In your project space, drag files directly into the file tree.
+
+    Supported formats: `.md`, `.mdx`, `.txt`, images (`.png`, `.jpg`), and more.
+  </Tab>
+  <Tab title="Git Integration" icon="github">
+    Connect your repo:
+
+````bash
+# From space settings, add GitHub repo
+git remote add qubeq https://github.com/yourusername/my-docs.git
+git push qubeq main
+````
+
+    Qubeq syncs changes automatically.
+  </Tab>
+  <Tab title="CLI Upload" icon="terminal">
+    Install Qubeq CLI (coming soon) and run:
+
+````bash
+qubeq upload --space "My Project Docs" ./docs/
+````
+  </Tab>
+</Tabs>
+
+## Basic Navigation and Editing
+
+<Image
+  src="https://via.placeholder.com/800x400/3B82F6/white?text=Qubeq+Editor"
+  alt="Qubeq editor interface showing sidebar navigation and preview pane"
+  width="800"
+  height="400"
+/>
+
+- **Sidebar**: Browse pages, search, and manage files
+- **Editor**: Live preview with MDX support—write markdown and see changes instantly
+- **Preview**: Real-time rendering with your brand colors (`#3B82F6`)
+
+Try editing a page: Click any `.mdx` file, add content, and hit **Publish**.
+
+<CodeGroup tabs="Markdown,MDX">
+```markdown
+# Welcome
+
+This is your first doc.
+```
+
+```mdx
+# Welcome
+
+<Callout kind="success">Great job!</Callout>
+```
+</CodeGroup>
+
+## Next Steps
+
+<Columns cols={3}>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your API access and webhooks.
+  </Card>
+  <Card title="Advanced Features" icon="sparkles" href="/configuration">
+    Customize themes and integrations.
+  </Card>
+  <Card title="Changelog" icon="git-branch" href="/changelog">
+    See what's new in recent updates.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+- **Upload fails**: Check file size limits (50MB max) and format.
+- **Sync errors**: Verify GitHub permissions and branch name.
+- **Editor not loading**: Clear browser cache or try incognito mode.
+</Expandable>
+
+You're ready to build! Your first space is live at `https://app.qubeq.com/spaces/my-project-docs`.

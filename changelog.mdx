@@ -1,0 +1,135 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and fixes in Qubeq to stay informed about new features.
+---
+
+## Stay Up to Date
+
+<Callout kind="info" title="Subscribe for Updates">
+Follow the official Qubeq GitHub repository or join the community Discord to receive notifications about new releases. Check this changelog regularly to understand changes before upgrading.
+</Callout>
+
+Qubeq releases updates frequently to enhance your documentation experience. Each version includes new features, usability improvements, bug fixes, and performance enhancements. Review the details below to see what's new.
+
+## Recent Releases
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for teams to edit docs simultaneously
+- Introduced version history with diff viewer for tracking changes
+- New search bar with fuzzy matching and syntax highlighting
+
+## Improvements
+
+- Enhanced editor performance by `>30%` for large documents
+- Better mobile responsiveness across all documentation pages
+
+## Bug Fixes
+
+- Fixed rendering issues with nested code blocks
+- Resolved authentication token expiration during long sessions
+
+</Update>
+
+<Update label="2024-09-20" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Customizable themes with brand color support (e.g., `#3B82F6`)
+- Integrated analytics dashboard for page views and engagement
+- Export docs to PDF or Markdown with one click
+
+## Bug Fixes
+
+- Patched security vulnerability in webhook endpoints
+- Fixed table alignment issues in MDX previews
+
+</Update>
+
+<Update label="2024-08-10" description="v1.1.0" tags={["improvement", "bugfix"]}>
+
+## Improvements
+
+- Optimized API response times to `<100ms` under normal load
+- Streamlined onboarding with interactive quickstart tour
+
+## Bug Fixes
+
+- Corrected image upload failures for files `>5MB`
+- Fixed keyboard navigation in expandable sections
+
+</Update>
+
+## Upgrade to the Latest Version
+
+Follow these steps to upgrade your Qubeq instance and benefit from the latest improvements.
+
+<Steps>
+  <Step title="Backup Your Data" icon="database">
+
+    Create a full backup of your documentation space.
+
+    ```
+    # Example backup command
+    qubeq backup --output ./backups/latest.tar.gz
+    ```
+
+  </Step>
+  <Step title="Update Package" icon="package">
+
+    <Tabs>
+      <Tab title="npm" icon="nodejs">
+````bash
+npm install qubeq@latest
+````
+      </Tab>
+      <Tab title="yarn" icon="package">
+````bash
+yarn add qubeq@latest
+````
+      </Tab>
+    </Tabs>
+
+  </Step>
+  <Step title="Run Migrations" icon="settings">
+
+    Apply any database schema changes.
+
+    ```
+    qubeq migrate --env production
+    ```
+
+  </Step>
+  <Step title="Restart Service" icon="refresh-cw">
+
+    Restart your Qubeq server.
+
+    ```
+    systemctl restart qubeq
+    # Or docker restart qubeq-container
+    ```
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+After upgrading, verify your custom configurations in the dashboard at `https://dashboard.example.com/settings`.
+</Callout>
+
+## Upcoming Features
+
+Stay tuned for these previews in future releases.
+
+<Columns cols={2}>
+  <Card title="AI-Powered Search" icon="search" horizontal>
+    Semantic search with natural language queries across your entire docs.
+  </Card>
+  <Card title="Advanced Workflows" icon="git-branch" horizontal>
+    Custom automation pipelines for doc publishing and reviews.
+  </Card>
+  <Card title="Plugin Ecosystem" icon="puzzle" horizontal>
+    Extend Qubeq with community plugins for integrations.
+  </Card>
+</Columns>
